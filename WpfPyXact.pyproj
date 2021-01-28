@@ -1,0 +1,163 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>fe2dbc38-6bbc-4009-b519-0f4a0ebd965d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>WpfPyXact.py</StartupFile>
+    <SearchPath>misc;source;io_module;imager;xray;script;icons</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <InterpreterId>IronPython|2.7-64</InterpreterId>
+    <LaunchProvider>IronPython (.NET) launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+    <Name>WpfPyXact</Name>
+    <RootNamespace>WpfPyXact</RootNamespace>
+    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
+    <DebugStdLib>True</DebugStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="axis\dummyaxis.py" />
+    <Compile Include="axis\fiveco.py" />
+    <Compile Include="base.py" />
+    <Compile Include="imager\demo.py" />
+    <Compile Include="imager\demoline.py" />
+    <Compile Include="imager\varian.py" />
+    <Compile Include="io_module\axisio.py" />
+    <Compile Include="io_module\fmod.py" />
+    <Compile Include="io_module\iodemo.py" />
+    <Compile Include="io_module\motorizeddoorio.py" />
+    <Compile Include="misc\anticollision.py" />
+    <Compile Include="misc\automation.py" />
+    <Compile Include="misc\axiscontrol.py" />
+    <Compile Include="misc\axisplot.py" />
+    <Compile Include="misc\configurator.py" />
+    <Compile Include="misc\displayzoom.py" />
+    <Compile Include="misc\distortionmap.py" />
+    <Compile Include="misc\distortionmap2.py" />
+    <Compile Include="misc\editor.py" />
+    <Compile Include="misc\editor_editionfonctionnalitiesbranch.py" />
+    <Compile Include="misc\equalizer.py" />
+    <Compile Include="misc\fixedoptic.py" />
+    <Compile Include="misc\geometryexporter.py" />
+    <Compile Include="misc\geometrysolver.py" />
+    <Compile Include="misc\geometrysolver2.py" />
+    <Compile Include="misc\geometryviewer2.py" />
+    <Compile Include="misc\imach3.py" />
+    <Compile Include="misc\imagecalculator.py" />
+    <Compile Include="misc\imageconverter.py" />
+    <Compile Include="misc\joystick.py" />
+    <Compile Include="misc\keepout.py" />
+    <Compile Include="misc\keepoutzone.py" />
+    <Compile Include="misc\laminoacquisition.py" />
+    <Compile Include="misc\mainapp.py" />
+    <Compile Include="misc\mesh2image.py" />
+    <Compile Include="misc\opticalzoom.py" />
+    <Compile Include="misc\qualitytools.py" />
+    <Compile Include="misc\remote.py" />
+    <Compile Include="misc\sample.py" />
+    <Compile Include="misc\serial.py" />
+    <Compile Include="misc\simpleblend.py" />
+    <Compile Include="misc\sleep.py" />
+    <Compile Include="misc\slowaxiszone.py" />
+    <Compile Include="misc\snapshot.py" />
+    <Compile Include="misc\spacer.py" />
+    <Compile Include="misc\temperatureplot.py" />
+    <Compile Include="misc\togglelight.py" />
+    <Compile Include="misc\tomoext.py" />
+    <Compile Include="misc\tomoext_branchmultipledetector.py" />
+    <Compile Include="misc\unict.py" />
+    <Compile Include="misc\unictinterface.py" />
+    <Compile Include="misc\video.py" />
+    <Compile Include="misc\xacttest.py" />
+    <Compile Include="pyevent.py" />
+    <Compile Include="request.py" />
+    <Compile Include="script\autoexecscript.py" />
+    <Compile Include="script\console.py" />
+    <Compile Include="script\positionfilterscript.py" />
+    <Compile Include="script\runscript.py" />
+    <Compile Include="script\runscript2.py" />
+    <Compile Include="script\web.py" />
+    <Compile Include="sensor\thermohid.py" />
+    <Compile Include="source\demosource.py" />
+    <Compile Include="source\hasealed1.py" />
+    <Compile Include="wizard\guidedacquisition.py" />
+    <Compile Include="wizard\tomowizard.py" />
+    <Compile Include="wizard\wizardinterface.py" />
+    <Compile Include="WpfPyXact.py" />
+    <Compile Include="xray\manualfilterswitch.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\CG-icon.ico" />
+    <Content Include="icons\PlayBtn.jpg" />
+    <Content Include="icons\StopBtn.jpg" />
+    <Content Include="WpfPyXact.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>mscorlib</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>PresentationCore</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>PresentationFramework</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>PresentationFramework.Aero</Name>
+      <AssemblyName>PresentationFramework.Aero.dll</AssemblyName>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>System</Name>
+      <AssemblyName>System.dll</AssemblyName>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>WindowsBase</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>System.Xaml</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="IronPython|2.7-32" />
+    <InterpreterReference Include="IronPython|2.7-64" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="axis\" />
+    <Folder Include="icons\" />
+    <Folder Include="imager\" />
+    <Folder Include="io_module\" />
+    <Folder Include="misc\" />
+    <Folder Include="script\" />
+    <Folder Include="sensor\" />
+    <Folder Include="source\" />
+    <Folder Include="wizard\" />
+    <Folder Include="xray\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
